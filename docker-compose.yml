@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: plantationai
+      POSTGRES_USER: plantationai
+      POSTGRES_PASSWORD: CHANGE_ME_DB_PASSWORD
+    volumes:
+      - plantationai_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plantationai -d plantationai"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg://plantationai:CHANGE_ME_DB_PASSWORD@db:5432/plantationai
+      ADMIN_API_TOKEN: CHANGE_ME_ADMIN_TOKEN
+      ENVIRONMENT: production
+    ports:
+      - "8780:8780"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+
+volumes:
+  plantationai_db:

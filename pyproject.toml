@@ -1,0 +1,9 @@
+[project]
+name = "plantationai360"
+version = "0.1.0"
+description = "Integrated tea plantation AI decision-support platform"
+requires-python = ">=3.11,<3.14"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

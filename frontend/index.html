@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlantationAI 360</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+<div class="shell">
+  <aside>
+    <div class="brand"><div class="mark">P360</div><div><b>PlantationAI 360</b><small>ADMIN INTELLIGENCE</small></div></div>
+    <nav>
+      <button class="active">Executive Dashboard</button>
+      <button>Field Intelligence</button><button>Disease AI</button><button>Crop Forecast</button>
+      <button>Factory Intelligence</button><button>Workforce Intelligence</button><button>RA / Sustainability</button>
+      <button>MD Booklet AI</button><button>Geo Risk Map</button><button>Data Quality</button><button>Model Registry</button>
+    </nav>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">TEA PLANTATION DECISION SUPPORT</p><h1>Executive Dashboard</h1></div><div class="status"><span></span> AI platform online</div></header>
+    <section class="auth"><label>Admin API token</label><input id="token" value="CHANGE-ME-PLANTATIONAI-ADMIN"/><button onclick="loadSummary()">Connect</button></section>
+    <section class="cards" id="cards">
+      <article><span>Estates</span><strong>—</strong></article><article><span>Divisions</span><strong>—</strong></article>
+      <article><span>Fields</span><strong>—</strong></article><article><span>Crop Records</span><strong>—</strong></article>
+      <article><span>Disease Events</span><strong>—</strong></article><article><span>AI Predictions</span><strong>—</strong></article>
+    </section>
+    <section class="grid">
+      <article class="panel"><p class="eyebrow">FIELD DECISION ENGINE</p><h2>Priority intelligence</h2><p class="muted">Risk rankings will activate when field operational data are loaded. No synthetic priorities are generated.</p><div class="empty">DATA NOT PROVIDED</div></article>
+      <article class="panel"><p class="eyebrow">MODEL STATUS</p><h2>AI readiness</h2><div class="model"><b>Tea Disease AI</b><span>Awaiting trained model</span></div><div class="model"><b>Crop Forecast AI</b><span>Awaiting training data</span></div><div class="model"><b>Factory AI</b><span>Phase 2</span></div></article>
+    </section>
+    <section class="panel"><p class="eyebrow">FOUNDATION BUILD</p><h2>What is live in v0.1.0</h2><div class="chips"><span>Master hierarchy</span><span>Operational warehouse</span><span>Weather connector</span><span>Vision API</span><span>Crop AI API</span><span>Prediction audit</span><span>Data ingestion</span></div></section>
+  </main>
+</div>
+<script src="/assets/app.js"></script>
+</body>
+</html>

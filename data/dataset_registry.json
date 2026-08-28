@@ -1,0 +1,52 @@
+{
+  "vision": {
+    "tea_disease": [
+      {
+        "name": "Sri Lankan Tea Leaf Dataset",
+        "source": "Mendeley Data",
+        "priority": "primary",
+        "license": "verify dataset page before redistribution",
+        "notes": "Use original images; preserve provenance; avoid leakage from offline augmentation."
+      },
+      {
+        "name": "Tea leaf disease annotated dataset",
+        "source": "Mendeley Data",
+        "priority": "supplementary",
+        "notes": "Useful where bounding-box labels add disease classes missing from primary dataset."
+      }
+    ],
+    "plucking_quality": [
+      {
+        "name": "TeaLeafAgeQuality",
+        "source": "Mendeley Data",
+        "priority": "experimental",
+        "notes": "Bootstrap only; do not equate public labels with TTE operational plucking standards without validation."
+      }
+    ],
+    "factory_fermentation": [
+      {
+        "name": "Black tea fermentation image dataset",
+        "source": "Mendeley Data",
+        "priority": "experimental",
+        "notes": "Validate against local factory process before operational use."
+      }
+    ]
+  },
+  "weather": [
+    {
+      "name": "Estate actual weather",
+      "priority": 1,
+      "notes": "Preferred source when available."
+    },
+    {
+      "name": "TRI / authoritative local source",
+      "priority": 2,
+      "notes": "Tea-specific supporting evidence."
+    },
+    {
+      "name": "NASA POWER",
+      "priority": 3,
+      "notes": "Supplementary/gap filling; grid-scale not field measurement."
+    }
+  ]
+}

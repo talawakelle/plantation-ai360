@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.db
+runs/
+data/raw/
+data/staged/
+data/exports/
+models/**/*.pt
+models/**/*.onnx
+models/**/*.joblib
+!models/README.md
